@@ -1,0 +1,256 @@
+
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    /* font-size: 26px; */
+   /* position: relative;*/
+    height: 100vh;
+    
+    /*transform-style: preserve-3d;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.flex-cont {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+}
+
+.body-container {
+    perspective: 1px;
+    height: 100vh;
+    
+    /*transform-style: preserve-3d;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.navButtons {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: space-around;
+}
+
+.navButtons > * {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: .5rem;
+    opacity: 0.5;
+    margin: 0px 0px 10px 0px;
+
+}
+
+.navButtons > * > img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+/*.navButtons {
+    position: -webkit-sticky;
+    position: sticky;*
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    z-index: 100;
+    border: solid 2px black; 
+    border-radius: 50%;
+    margin: 5px;
+    margin-bottom: 70px;
+}*/
+
+#homeButton:hover {
+    opacity: 1;
+}
+
+#portfolioButton:hover {
+    opacity: 1;
+}
+
+#aboutButton:hover {
+    opacity: 1;
+}
+
+#contactButton:hover {
+    opacity: 1;
+}
+.parallaxWrapper {
+    width: 105vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+.parallaxWrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    /* background-image: url("../images/backgrounds/redGarden2.jpg"); */
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#greetingBackground::before {
+    background-image: url("../images/backgrounds/redGarden2.jpg");
+}
+
+#aboutBackground::before {
+    background-image: url("../images/backgrounds/Tower\ two.jpg");
+}
+
+
+#contactBackground::before {
+    background-image: url("../images/backgrounds/IMG_7066.jpeg");
+}
+
+.regularWrapper {
+    width: 100vw;
+    /* height: 100vh; */
+    /* padding-top: 20vh; */
+    background-image: url("../images/Textures/mochaGrunge.png");
+    z-index: 2;
+    position: relative;
+    border-top: ridge 2px burlywood;
+    border-bottom: ridge 2px burlywood;
+
+}
+
+#greetings {
+    border: 4px solid darkorange;
+    border-radius: 3px;
+    background-image: url("../images/Textures/topography.png");
+    box-shadow: 4px 4px 20px black;
+    text-align: center;
+    margin: 10rem;
+    padding: 5px;
+}
+
+#portfolioHeader, #aboutHeader {
+    position: relative;
+    width: 100vw;
+    margin: 0 0 ;
+    text-align: center;
+    border: 1rem groove rgb(159, 165, 165);
+    color: white;
+    background-image: url("../images/Textures/escheresque_ste_@2X.png");
+    /* z-index: 10; */
+}
+
+.portfolioCard, .portfolioCardInert {
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    border: 4px solid darkorange;
+    border-radius: 3px;
+    background-image: url("../images/Textures/topography.png");
+    box-shadow: 4px 4px 20px black;
+    text-align: center;
+    margin: 4rem;
+    padding: 2px;
+}
+
+.portfolioCard:hover {
+   
+    box-shadow: 4px 4px 20px rgb(35, 38, 243);
+    border: 4px inset darkgoldenrod;
+    border-radius: 0px;
+}
+
+.herokuIcon {
+    height: 75px;
+    width: auto;
+    border: 1px 1px dashed black;
+    border-radius: 3px;
+}
+
+.herokuIcon:hover {
+    border: 1px 1px dashed black;
+    box-shadow: 1px 1px 30px rgb(156, 253, 91);
+}
+
+.githubIcon {
+    width: 75px;
+    height: 75px;
+    border: 1px 1px dashed black;
+    border-radius: 50%;
+   
+}
+
+.githubIcon:hover {
+    border: 2px 2px dashed black;
+    box-shadow: 1px 1px 30px rgb(130, 209, 245);
+}
+
+.img-fluid {
+    max-width: 90%;
+    border: solid 1px darkslategrey;
+}
+
+.resumeIcon:hover {
+    box-shadow: 1px 1px 30px rgb(130, 209, 245);
+}
+
+#techIcons {
+    width: 75px;
+    height: 75px;
+    margin: 2px;
+}
+
+#aboutHeader {
+   padding: 20px;
+}
+
+#portrait {
+    border: double 6px darkgoldenrod;
+    border-radius: 35%;
+    margin: 10px;
+    animation: portraitTransition 3s;
+
+}
+
+#portrait:hover{
+    @keyframes portraitTransition {
+       0%{filter: blur(0px);}
+       100%{filter: blur(6px);}
+
+    }
+}
+
+#aboutMe {
+    padding: 10px;
+}
+
+#contactCard {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .img-fluid {
+        /* width: 90vw; */
+        height: 350px;
+        width: auto;
+    }
+    
+
+}
