@@ -177,8 +177,20 @@ body {
     border-radius: 0px;
 }
 
+.wwwIcon {
+    height: 60px;
+    width: 60px;
+    border: 1px 1px dashed black;
+    border-radius: 50%;
+}
+
+.wwwIcon:hover {
+    border: 1px 1px dashed black;
+    box-shadow: 1px 1px 30px rgb(156, 253, 91);  
+}
+
 .herokuIcon {
-    height: 75px;
+    height: 65px;
     width: auto;
     border: 1px 1px dashed black;
     border-radius: 3px;
